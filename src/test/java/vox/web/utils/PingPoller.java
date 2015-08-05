@@ -17,5 +17,19 @@ public class PingPoller {
 		}
 
 	}
+	
+	public static void getServerTime() throws IOException {
+      System.out.println("Ping Poller Starts...");
+
+      try {
+          Socket socket = new Socket("staging.voxweb.in", 443);
+          socket.close();
+          System.out.println("Server is up");
+
+      } catch (IOException e) {
+          System.out.println("Server is down");
+      }
+
+  }
 
 }
